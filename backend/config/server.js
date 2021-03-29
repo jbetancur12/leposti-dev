@@ -1,9 +1,11 @@
 module.exports = ({ env }) => ({
-  host: env('HOST', '0.0.0.0'),
-  port: env.int('PORT', 1337),
+  host: env("HOST", "0.0.0.0"),
+  port: env.int("PORT", 1337),
+  url: "https://leposti.ml/api",
   admin: {
+    url: "https://leposti.ml/admin",
     auth: {
-      secret: env('ADMIN_JWT_SECRET', 'd739c86433defbcaa2fe8e91a4828266'),
+      secret: env("ADMIN_JWT_SECRET", "d739c86433defbcaa2fe8e91a4828266"),
     },
   },
 });
