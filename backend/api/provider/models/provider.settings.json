@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "providers",
+  "info": {
+    "name": "provider"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "email": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "producto": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "formato": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    },
+    "telefono": {
+      "type": "integer"
+    },
+    "notices": {
+      "via": "providers",
+      "collection": "notice"
+    },
+    "orders": {
+      "via": "provider",
+      "collection": "order"
+    },
+    "prices": {
+      "via": "medio",
+      "collection": "price"
+    }
+  }
+}

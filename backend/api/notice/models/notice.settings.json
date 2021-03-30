@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "notices",
+  "info": {
+    "name": "notice",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "required": true
+    },
+    "providers": {
+      "collection": "provider",
+      "via": "notices",
+      "dominant": true
+    },
+    "orders": {
+      "via": "notice",
+      "collection": "order"
+    },
+    "prices": {
+      "via": "formato",
+      "collection": "price"
+    }
+  }
+}
