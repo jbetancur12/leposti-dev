@@ -6,7 +6,7 @@ module.exports = ({ env }) => ({
   admin: {
     //url: env("HOST_ADMIN", "http:localhost:1337/admin"),
     //url: "https://leposti.ml/dashboard",
-    url: "https://admin.leposti.ml",
+    url: "https://administrador.leposti.ml",
     auth: {
       secret: env("ADMIN_JWT_SECRET", "d739c86433defbcaa2fe8e91a4828266"),
     },
